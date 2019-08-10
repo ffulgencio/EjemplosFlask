@@ -1,0 +1,13 @@
+{%  extends "layout.html" %}
+
+{% block content %}
+
+<form action= "/form/procesar" method="POST">
+    <input type='text' name='nombre'>
+    <input type= 'text'name='telefono'>
+    <input type="submit" value="Enviar" />
+</form>
+
+{% endblock %}
+
+

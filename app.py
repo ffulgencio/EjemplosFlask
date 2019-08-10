@@ -14,19 +14,19 @@ def index():
 
 @app.route('/products/<int:id>')
 def getProductById(id, methods=['GET','POST']):
-    print(nombre)
     products = ['Mause', 'Teclado','Procesador','tarjeta de video']
-    return render_template('product-detail.html', product = products[id], products = products)
+    product = products[id]
+    return render_template('product-detail.html', product = product, products = products)
 
 
 @app.route('/form')
 def formulario():
-    return render_template('form.html')
+    return render_template('test.jinja2')
 
 @app.route('/form/procesar',methods=['POST','GET'])
 def procesarForm():
-    nombre = request.form['nombre']
-    telefono = request.form['telefono']
+    #nombre = request.form['nombre']
+    # telefono = request.form['telefono']
     return jsonify(request.form)
 
 

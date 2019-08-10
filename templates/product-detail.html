@@ -1,0 +1,13 @@
+{% if product == 'Teclado'   %}
+    Producto <h1>{{ product }} </h1>
+{% else %}
+    Producto {{ product }}
+{% endif %}
+
+<ol>
+{% for p in products %}
+    <li>{{ p }}</li>
+{% endfor %}
+</ol>
+
+

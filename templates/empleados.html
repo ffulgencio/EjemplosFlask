@@ -1,0 +1,19 @@
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Telefono</th>
+    </tr>
+    {% for emp in empleados %}
+        <tr>
+            <td>
+              {{ emp['nombre'] }}  
+            </td>
+            <td>
+                {{ emp['telefono'] }}
+            </td>
+        </tr>
+    {% endfor %}
+
+
+</table>
